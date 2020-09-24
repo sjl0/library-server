@@ -70,8 +70,11 @@ const bookRoutes = (app, fs) => {
   app.delete("/request/:id", (req, res) => {
     readFile(
       data => {
-        const userId = req.params["id"];
-        delete data[userId];
+        const bookId = req.params["id"];
+        if (!data[bookId]) {
+          res.status(422).send('<h1 style="color:red;">Invalid Book Id</h1>');
+        }
+        delete data[bookId];
 
         writeFile(
           JSON.stringify(data, null, 2),

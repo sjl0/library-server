@@ -1,2 +1,24 @@
-1. run `npm install`
-2. run `npm start`. You should see "listening on port 3001"
+1. Feel free to add yourself to the users db in data/users.json. These emails
+   will be used to check authorization to use the library. If you would like to
+   access the catalog with an existing user, you can use the e-mail `you@library.com`
+2. From the root of the project, run `npm install`
+3. run `npm start`. You should see "listening on port 3001"
+4. You can now make requests to the library API
+
+Usage:
+GET /
+Homepage
+
+GET /request/
+Returns all books in the catalog
+
+POST /request { "email": <email-in-database>, "title": <book-in-database-case-sensitive }
+Returns all books in catalog with given title.
+If more than one book, returns a list of books. If one book, returns single book.
+If book not found or user not in database, returns error
+
+DELETE /request/<id>
+Deletes book from database. If id not in database, returns error.
+
+Simple Restful Node API Server using JSON Flatfiles Database
+Inspired by: https://robkendal.co.uk/blog/how-to-build-a-restful-node-js-api-server-using-json-files
