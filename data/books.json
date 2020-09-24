@@ -1,0 +1,38 @@
+{
+  "0": {
+    "title": "Ain't I a Woman",
+    "author": "bell hooks"
+    "available": 0,
+    "id": 0
+  },
+  "1": {
+    "title": "On Intersectionality: Essential Writings",
+    "author": "Kimberle Crenshaw"
+    "available": 1,
+    "id": 1
+  },
+  "2": {
+    "title": "Sister Outsider",
+    "author": "Audre Lorde"
+    "available": 1,
+    "id": 2
+  },
+  "3": {
+    "title": "Playing in the Dark",
+    "author": "Toni Morrison"
+    "available": 0,
+    "id": 3
+  },
+  "4": {
+    "title": "Bad Feminist",
+    "author": "Roxane Gay"
+    "available": 1,
+    "id": 4
+  },
+  "5": {
+    "title": "We Should All Be Feminists",
+    "author": "Chimamanda Ngozi Adichie"
+    "available": 0,
+    "id": 5
+  },
+}
