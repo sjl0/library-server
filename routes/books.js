@@ -67,6 +67,25 @@ const bookRoutes = (app, fs) => {
     );
   });
 
+  app.delete("/request/:id", (req, res) => {
+    readFile(
+      data => {
+        const userId = req.params["id"];
+        delete data[userId];
+
+        writeFile(
+          JSON.stringify(data, null, 2),
+          () => {
+            res.status(200).send({});
+          },
+          booksPath
+        );
+      },
+      booksPath,
+      true
+    );
+  });
+
   const readFile = (
     callback,
     filePath,
